@@ -251,6 +251,9 @@ class LibraryManagementSystem:
         btnframe.place(x=0, y=530, width=1530, height=60)
 
         # Buttons
+        btnAddData=Button(btnframe, command=self.add_data, text="Add Data", font=("arial", 12, "bold"), width=23, bg="#006699", fg="white")
+        btnAddData.grid(row=0, column=0)
+        
         btnShowData = Button(btnframe, command=self.showData, text="Show Data", font=("arial", 12, "bold"), width=23, bg="#006699", fg="white")
         btnShowData.grid(row=0, column=1)
 
@@ -428,7 +431,7 @@ class LibraryManagementSystem:
         
     def showData(self):
         self.txtBox.insert(END,"Member Type\t\t" + self.member_var.get() + "\n")    
-        self.txtBox.insert(END,"PRN No.\t\t\t" + self.prn_var.get() + "\n")
+        self.txtBox.insert(END,"PRN No.\t\t" + self.prn_var.get() + "\n")
         self.txtBox.insert(END,"ID No.\t\t\t" + self.id_var.get() + "\n")
         self.txtBox.insert(END,"First Name\t\t" + self.firstname_var.get() + "\n")
         self.txtBox.insert(END,"Last Name\t\t" + self.lastname_var.get() + "\n")
@@ -436,9 +439,9 @@ class LibraryManagementSystem:
         self.txtBox.insert(END,"Address 2\t\t" + self.address2_var.get() + "\n")
         self.txtBox.insert(END,"Postcode\t\t" + self.postcode_var.get() + "\n")
         self.txtBox.insert(END,"Mobile No.\t\t" + self.mobile_var.get() + "\n")
-        self.txtBox.insert(END,"Book ID\t\t\t" + self.bookid_var.get() + "\n")
+        self.txtBox.insert(END,"Book ID\t\t" + self.bookid_var.get() + "\n")
         self.txtBox.insert(END,"Book Title\t\t" + self.booktitle_var.get() + "\n")
-        self.txtBox.insert(END,"Author\t\t\t" + self.author_var.get() + "\n")
+        self.txtBox.insert(END,"Author\t\t" + self.author_var.get() + "\n")
         self.txtBox.insert(END,"Date Borrowed\t\t" + self.dateborrowed_var.get() + "\n")
         self.txtBox.insert(END,"Date Due\t\t" + self.datedue_var.get() + "\n")
         self.txtBox.insert(END,"Days on Book\t\t" + self.daysonbook_var.get() + "\n")
